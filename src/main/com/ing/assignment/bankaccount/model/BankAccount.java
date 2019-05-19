@@ -1,5 +1,6 @@
 package com.ing.assignment.bankaccount.model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class BankAccount {
@@ -10,9 +11,21 @@ public class BankAccount {
     private AccountType accountType;
     private String currency;
     private String branchCode;
-    private Date openDate;
+    private LocalDate openDate;
     private boolean joinAccount;
     private long joinAccountHolder;
+
+    public BankAccount(long accountHolderId, long accountBalance, AccountType accountType, String currency,
+                       String branchCode, LocalDate openDate, boolean joinAccount, long joinAccountHolder) {
+        this.accountHolderId = accountHolderId;
+        this.accountBalance = accountBalance;
+        this.accountType = accountType;
+        this.currency = currency;
+        this.branchCode = branchCode;
+        this.openDate = openDate;
+        this.joinAccount = joinAccount;
+        this.joinAccountHolder = joinAccountHolder;
+    }
 
     public long getAccountNumber() {
         return accountNumber;
@@ -62,11 +75,11 @@ public class BankAccount {
         this.branchCode = branchCode;
     }
 
-    public Date getOpenDate() {
+    public LocalDate getOpenDate() {
         return openDate;
     }
 
-    public void setOpenDate(Date openDate) {
+    public void setOpenDate(LocalDate openDate) {
         this.openDate = openDate;
     }
 

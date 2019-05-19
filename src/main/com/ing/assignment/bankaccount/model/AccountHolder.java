@@ -1,10 +1,10 @@
 package com.ing.assignment.bankaccount.model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class AccountHolder {
 
-    private long accountHolderId;
     private String nationalIdNumber;
     private String firstName;
     private String lastName;
@@ -14,18 +14,29 @@ public class AccountHolder {
     private String city;
     private String state;
     private String country;
-    private Date dateOfBirth;
+    private LocalDate dateOfBirth;
     private String gender;
     private String phoneNumber;
-    private Date joinedDate;
+    private LocalDate joinedDate;
 
-    public long getAccountHolderId() {
-        return accountHolderId;
+    public AccountHolder(String nationalIdNumber, String firstName, String lastName,
+                         String houseNo, String streetAddress1, String streetAddress2, String city, String state,
+                         String country, LocalDate dateOfBirth, String gender, String phoneNumber, LocalDate joinedDate) {
+        this.nationalIdNumber = nationalIdNumber;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.houseNo = houseNo;
+        this.streetAddress1 = streetAddress1;
+        this.streetAddress2 = streetAddress2;
+        this.city = city;
+        this.state = state;
+        this.country = country;
+        this.dateOfBirth = dateOfBirth;
+        this.gender = gender;
+        this.phoneNumber = phoneNumber;
+        this.joinedDate = joinedDate;
     }
 
-    public void setAccountHolderId(long accountHolderId) {
-        this.accountHolderId = accountHolderId;
-    }
 
     public String getNationalIdNumber() {
         return nationalIdNumber;
@@ -99,11 +110,11 @@ public class AccountHolder {
         this.country = country;
     }
 
-    public Date getDateOfBirth() {
+    public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -123,11 +134,11 @@ public class AccountHolder {
         this.phoneNumber = phoneNumber;
     }
 
-    public Date getJoinedDate() {
+    public LocalDate getJoinedDate() {
         return joinedDate;
     }
 
-    public void setJoinedDate(Date joinedDate) {
+    public void setJoinedDate(LocalDate joinedDate) {
         this.joinedDate = joinedDate;
     }
 }
