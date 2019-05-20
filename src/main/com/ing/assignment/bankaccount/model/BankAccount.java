@@ -1,11 +1,19 @@
 package com.ing.assignment.bankaccount.model;
 
-import java.time.LocalDate;
-import java.util.Date;
+import lombok.Data;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import java.time.LocalDate;
+
+@Data
+@Entity
 public class BankAccount {
 
-    private long accountNumber;
+    private @Id
+    @GeneratedValue
+    Long accountNumber;
     private long accountHolderId;
     private long accountBalance;
     private AccountType accountType;
@@ -14,6 +22,9 @@ public class BankAccount {
     private LocalDate openDate;
     private boolean joinAccount;
     private long joinAccountHolder;
+
+    public BankAccount() {
+    }
 
     public BankAccount(long accountHolderId, long accountBalance, AccountType accountType, String currency,
                        String branchCode, LocalDate openDate, boolean joinAccount, long joinAccountHolder) {
@@ -27,11 +38,11 @@ public class BankAccount {
         this.joinAccountHolder = joinAccountHolder;
     }
 
-    public long getAccountNumber() {
+    public Long getAccountNumber() {
         return accountNumber;
     }
 
-    public void setAccountNumber(long accountNumber) {
+    public void setAccountNumber(Long accountNumber) {
         this.accountNumber = accountNumber;
     }
 

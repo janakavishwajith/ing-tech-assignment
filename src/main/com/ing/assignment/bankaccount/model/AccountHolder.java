@@ -1,7 +1,6 @@
 package com.ing.assignment.bankaccount.model;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class AccountHolder {
 

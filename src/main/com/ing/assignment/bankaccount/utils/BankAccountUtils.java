@@ -3,6 +3,7 @@ package com.ing.assignment.bankaccount.utils;
 import com.ing.assignment.bankaccount.model.AccountHolder;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.temporal.ChronoField;
 import java.time.temporal.TemporalField;
 import java.util.ArrayList;
@@ -25,7 +26,7 @@ public class BankAccountUtils {
     }
 
     public static long generateNewBankAccountNumber() {
-        return LocalDate.now().getLong(ChronoField.NANO_OF_DAY);
+        return LocalDateTime.now().getLong(ChronoField.NANO_OF_DAY);
 
     }
 }
