@@ -8,24 +8,38 @@ Anyway, I started with adding thymeleaf dependencies and controllers, but I coul
 
 ----REST Endpoints are----
 
+
 Read all accounts,
 GET localhost:8080/accounts
+
+
 
 Add new account,
 
 POST localhost:8080/accounts
 
 Request Body, JSON
+
 {
-	"accountHolderId": 1,
+
+  "accountHolderId": 1,
+  
   "accountBalance": 500,
+  
   "accountType": "SAVINGS_ACCOUNT",
+  
   "currency": "LKR",
+  
   "branchCode": "AB",
+  
   "openDate": "2019-05-21",
+  
   "joinAccount": false,
+  
   "joinAccountHolder": -1
+  
 }
+
 
 
 Read one account
